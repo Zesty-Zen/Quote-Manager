@@ -3,7 +3,7 @@ class Quote < ApplicationRecord
 
     scope :ordered, -> { order(id: :desc) }
 
-        # Following are the 3 ways to write a broadcasting function
+    # Following are the 3 ways to write a broadcasting function
 
         # after_create_commit -> { broadcast_prepend_to "quotes", partial: "quotes/quote", locals: { quote: self }, target: "quotes" }
         # after_create_commit -> { broadcast_prepend_to "quotes", partial: "quotes/quote", locals: { quote: self } }
@@ -25,5 +25,5 @@ class Quote < ApplicationRecord
     
     broadcasts_to ->(quote) { "quotes" }, inserts_by: :prepend
 
-
+    belong_to :user
 end
