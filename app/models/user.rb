@@ -5,4 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :quotes
+
+  def name
+    email.split("@").first.capitalize
+  end
+
+
+
+
+
 end

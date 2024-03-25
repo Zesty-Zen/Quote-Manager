@@ -2,7 +2,7 @@ class QuotesController < ApplicationController
     before_action :set_quote, only: [:show, :edit, :update, :destroy]
   
     def index
-      @quotes = Quote.ordered
+        @quotes = current_user.quotes.ordered
     end
   
     def show
@@ -14,7 +14,7 @@ class QuotesController < ApplicationController
   
     def create
       @quote = Quote.new(quote_params)
-    
+      @quote.user_id = current_user.id
       if @quote.save
         respond_to do |format|
           format.html { redirect_to quotes_path, notice: "Quote was successfully created." }

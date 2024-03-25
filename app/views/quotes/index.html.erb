@@ -1,5 +1,5 @@
-<%= turbo_stream_from "quotes" %>
- 
+
+<%= turbo_stream_from current_user, "quotes" %>
   <main class="container">
     <div class="container">
       <div class="header">
