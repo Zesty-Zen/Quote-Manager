@@ -14,7 +14,8 @@ class QuotesController < ApplicationController
   
     def create
       @quote = Quote.new(quote_params)
-    
+      @quote.user_id = current_user.id
+
       if @quote.save
         respond_to do |format|
           format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
