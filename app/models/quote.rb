@@ -5,31 +5,6 @@ class Quote < ApplicationRecord
     
     belongs_to :user
    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     # Following are the 3 ways to write a broadcasting function
 
         # after_create_commit -> { broadcast_prepend_to "quotes", partial: "quotes/quote", locals: { quote: self }, target: "quotes" }
