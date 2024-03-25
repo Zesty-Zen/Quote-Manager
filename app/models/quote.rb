@@ -2,8 +2,10 @@ class Quote < ApplicationRecord
     validates :name, presence: true
 
     scope :ordered, -> { order(id: :desc) }
-
-        # Following are the 3 ways to write a broadcasting function
+    
+    belongs_to :user
+   
+    # Following are the 3 ways to write a broadcasting function
 
         # after_create_commit -> { broadcast_prepend_to "quotes", partial: "quotes/quote", locals: { quote: self }, target: "quotes" }
         # after_create_commit -> { broadcast_prepend_to "quotes", partial: "quotes/quote", locals: { quote: self } }
@@ -23,7 +25,11 @@ class Quote < ApplicationRecord
 
     #Following is a one line code that performs the method of all three written above
     
-    broadcasts_to ->(quote) { "quotes" }, inserts_by: :prepend
+        # broadcasts_to ->(quote) { "quotes" }, inserts_by: :prepend
 
+    #Follwing only broadcasts to the same users
+
+        broadcasts_to ->(quote) { [quote.user, "quotes"] }, inserts_by: :prepend
+      
 
 end

@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 3px;
+    margin-bottom: 3px;
+    background-color: rgb(228, 228, 228);
+  }
+  
+    .navbar__brand{
+      color: black;
+      float: left;
+      font-weight: bold;
+    }
+  
+    .navbar__name{
+      color: black;
+      font-weight: bold;
+    }
+  
+    .navbar__right{
+      color: black;
+      font-weight: bold;
+    }

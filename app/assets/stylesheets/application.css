@@ -14,16 +14,14 @@
  *= require_self
  */
 
+ @import "navbar";
+
+
 
  body{
     font-family: cursive;
     margin: 5px;
   }
-  
-  
-  
-  
-  
   
   a{
     color: darkgrey;
