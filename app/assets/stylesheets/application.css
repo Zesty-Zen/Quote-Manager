@@ -17,6 +17,7 @@
  @import "navbar";
  @import "flash";
  @import "flash_animation";
+ @import "_empty_state";
 
 
  body{
