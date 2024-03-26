@@ -1,1 +1,15 @@
 <%= turbo_stream.remove @quote %>
+<%= turbo_stream.prepend "flash", partial: "layouts/flash" %>
+
+
+
+
+<% if current_user.quotes.none? %>
+
+  <%= turbo_stream.update Quote.new do %>
+
+    <%= render "quotes/empty_state" %>
+
+  <% end %>
+  
+<% end %>

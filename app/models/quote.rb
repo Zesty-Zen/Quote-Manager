@@ -3,7 +3,12 @@ class Quote < ApplicationRecord
 
     scope :ordered, -> { order(id: :desc) }
     
+    has_many :line_item_dates, dependent: :destroy
+    
+    
     belongs_to :user
+
+
    
     # Following are the 3 ways to write a broadcasting function
 
