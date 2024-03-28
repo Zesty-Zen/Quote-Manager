@@ -15,8 +15,6 @@ class LineItemDatesController < ApplicationController
           end
         else
           render :new, status: :unprocessable_entity
-
-                                
         end
     end
 
