@@ -25,3 +25,36 @@
     gap: var(--space-xs);
   }
   
+
+
+
+
+  .line-item-date__body {
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-small);
+    margin-top: var(--space-xs);
+    padding: var(--space-xxs);
+    padding-top: 0;
+    
+  }
+  
+  @media (min-width: 768px) {
+    .line-item-date__body {
+      padding: var(--space-m);
+    }
+  }
+  
+  .line-item-date__footer {
+    border: dashed 2px var(--color-light);
+    border-radius: var(--border-radius);
+    text-align: center;
+    padding: var(--space-xxs);
+  }
+  
+  @media (min-width: 768px) {
+    .line-item-date__footer {
+      padding: var(--space-m);
+    }
+  }
+  

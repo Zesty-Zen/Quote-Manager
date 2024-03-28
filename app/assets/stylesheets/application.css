@@ -14,11 +14,18 @@
  *= require_self
  */
 
+
+
+
+
+ 
  @import "navbar";
  @import "flash";
  @import "flash_animation";
  @import "empty_state";
  @import "line_item_date";
+ @import "line_item";
+ @import "total";
 
 
  body{
