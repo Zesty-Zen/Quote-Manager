@@ -9,16 +9,20 @@
 
 
     <%= f.input :name,
+                placeholder: "Name",  # Add placeholder attribute
                 wrapper_html: {class: "line-item__name"},
                 input_html: { autofocus: true } %>
 
     <%= f.input :quantity,
+                placeholder: "Quantity",  # Add placeholder attribute
                 wrapper_html: {class: "line-item__quantity"} %>
 
     <%= f.input :unit_price,
+                placeholder: "Unit Price",  # Add placeholder attribute
                 wrapper_html: {class: "line-item__price"} %>
 
     <%= f.input :description,
+                placeholder: "Add Description (Optional)",  # Add placeholder attribute
                 wrapper_html: {class: "line-item__description"} %>
 
     <div class= "line-item__actions" >
