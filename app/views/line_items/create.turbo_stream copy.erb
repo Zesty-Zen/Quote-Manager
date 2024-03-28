@@ -1,0 +1,10 @@
+<%#
+%>
+
+<%= turbo_stream.update dom_id(LineItem.new , dom_id(@line_item_date)) , "" %>
+
+<%= turbo_stream.append "#{dom_id(@line_item_date)}_line_items" do %>
+  <%= render @line_item, quote: @quote, line_item_date: @line_item_date %>
+<% end %>
+
+<%= turbo_stream.prepend "flash", partial: "layouts/flash" %>

@@ -1,16 +1,21 @@
 .empty-state {
-    padding: var(--space-m);
-    /* border: var(--border);
-    border-style: dashed; */
-    text-align: center;
-  }
-  
-  .empty-state__text {
-    font-size: var(--font-size-l);
-    color: var(--color-text-header);
-    margin-bottom: var(--space-l);
-    font-weight: bold;
-  }
-  
+  padding: var(--space-m);
+  border: var(--border);
+  border-style: dashed;
+  text-align: center;
+}
 
-  
+.empty-state__text {
+  font-size: var(--font-size-l);
+  color: var(--color-text-header);
+  margin-bottom: var(--space-l);
+  font-weight: bold;
+}
+
+.empty-state--only-child {
+  display: none;
+}
+
+.empty-state--only-child:only-child {
+  display: revert;
+}
