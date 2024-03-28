@@ -1,60 +1,54 @@
 .line-item-date {
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-xxs);
-  }
-  
-  .line-item-date__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-xs);
-  }
-  
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xxs);
+}
+
+.line-item-date__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+}
+
+.line-item-date__title {
+  font-size: var(--font-size-xl);
+}
+
+@media (min-width: 50rem) {
   .line-item-date__title {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xxl);
   }
-  
-  @media (min-width: 768px) {
-    .line-item-date__title {
-      font-size: var(--font-size-xxl);
-    }
-  }
-  
-  .line-item-date__actions {
-    display: flex;
-    gap: var(--space-xs);
-  }
-  
+}
 
+.line-item-date__actions {
+  display: flex;
+  gap: var(--space-xs);
+}
 
+.line-item-date__body {
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+  margin-top: var(--space-xs);
+  padding: var(--space-xxs);
+  padding-top: 0;
+}
 
-
+@media (min-width: 50rem) {
   .line-item-date__body {
-    border-radius: var(--border-radius);
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-small);
-    margin-top: var(--space-xs);
-    padding: var(--space-xxs);
-    padding-top: 0;
-    
+    padding: var(--space-m);
   }
-  
-  @media (min-width: 768px) {
-    .line-item-date__body {
-      padding: var(--space-m);
-    }
-  }
-  
+}
+
+.line-item-date__footer {
+  border: dashed 2px var(--color-light);
+  border-radius: var(--border-radius);
+  text-align: center;
+  padding: var(--space-xxs);
+}
+
+@media (min-width: 50rem) {
   .line-item-date__footer {
-    border: dashed 2px var(--color-light);
-    border-radius: var(--border-radius);
-    text-align: center;
-    padding: var(--space-xxs);
+    padding: var(--space-m);
   }
-  
-  @media (min-width: 768px) {
-    .line-item-date__footer {
-      padding: var(--space-m);
-    }
-  }
-  
+}
