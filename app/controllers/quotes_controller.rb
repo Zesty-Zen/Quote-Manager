@@ -2,9 +2,13 @@ class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   def index
-      @quotes = current_user.quotes.ordered
-  end
+    @q = current_user.quotes.ordered.ransack(params[:q])
+    @quotes = @q.result
 
+
+    # @quotes = current_user.quotes.ordered
+  end
+  
   def show
     @line_item_dates = @quote.line_item_dates.ordered
   end
