@@ -24,8 +24,8 @@
 
       <div class="search-bar">  
         <%= search_form_for @q, url: quotes_path, method: :get, remote: true do |f| %>
-            <%= f.text_field :name_cont, class: "search-field" ,  placeholder: "Enter Quote Name" %>
-            <%= f.submit "Search", class: "search-button" %>
+            <%= f.text_field :name_cont, class: "search-field" ,  placeholder: "     Enter Quote Name" %>
+            <%= f.submit "Search", class: "search-button btn btn--primary" %>
         <% end %>
       </div>        
 

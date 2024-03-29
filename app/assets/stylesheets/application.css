@@ -66,14 +66,22 @@ h1{
 }
 .search-field{
   font-style: italic;
+  height: 100%;
   width: 87%;
   height: 2rem;
+  border-color: lightgray;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.search-button{
+/* .search-button{
   font-style: italic;
   width: 10%;
   height: 2rem;
-}
+  text-align: center;  
+  display: flex;  
+  justify-content: center; 
+  align-items: center
+} */
 
 
 
