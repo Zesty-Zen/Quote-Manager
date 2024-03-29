@@ -1,3 +1,7 @@
+
+
+
+
 /* Target the Main Pagination Bar */
 
 nav.pagy.pagy-nav.pagination {
@@ -23,24 +27,28 @@ nav.pagy.pagy-nav.pagination span:hover{
 /* Target the previous page button when it is active (User is not on the first page) */
 
 nav.pagy.pagy-nav.pagination span.page.prev:not(.disabled) {
+  font-size: medium;
 }
 
 
 /* Target the previous page button when it is disabled (User is on the first page) */
 
 nav.pagy.pagy-nav.pagination span.page.prev.disabled {
+  font-size: medium;
 }
 
 
 /* Target the next page button when it is active (User is not on the last page) */
 
 nav.pagy.pagy-nav.pagination span.page.next:not(.disabled) {
+  font-size: medium;
 }
 
 
 /* Target the next page button when it is disabled (User is on the last page) */
 
 nav.pagy.pagy-nav.pagination span.page.next.disabled {
+  font-size: medium;
 }
 
 
@@ -62,6 +70,7 @@ nav.pagy.pagy-nav.pagination span.page.active{
 /* Following will also apply to the next button when user is on the last page so you gotta write those with !important */
 
 nav.pagy.pagy-nav.pagination span.page.active + span   {
+  font-size: medium;
 }   
 
 
