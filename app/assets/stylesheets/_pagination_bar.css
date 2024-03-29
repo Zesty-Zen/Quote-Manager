@@ -1,0 +1,80 @@
+/* Target the Main Pagination Bar */
+
+nav.pagy.pagy-nav.pagination {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 1rem;
+  
+}
+
+
+/* Targets all the elements of pagination bar */
+
+nav.pagy.pagy-nav.pagination span{
+  display: flex;
+  width: 3%;
+  justify-content: center;
+}
+nav.pagy.pagy-nav.pagination span:hover{
+  background-color: rgb(120, 120, 120);
+}
+
+
+/* Target the previous page button when it is active (User is not on the first page) */
+
+nav.pagy.pagy-nav.pagination span.page.prev:not(.disabled) {
+}
+
+
+/* Target the previous page button when it is disabled (User is on the first page) */
+
+nav.pagy.pagy-nav.pagination span.page.prev.disabled {
+}
+
+
+/* Target the next page button when it is active (User is not on the last page) */
+
+nav.pagy.pagy-nav.pagination span.page.next:not(.disabled) {
+}
+
+
+/* Target the next page button when it is disabled (User is on the last page) */
+
+nav.pagy.pagy-nav.pagination span.page.next.disabled {
+}
+
+
+/* Target the pages user is not on at the moment */
+
+nav.pagy.pagy-nav.pagination span.page:not(.active):not(.next):not(.prev):not(span.page.active + span ){
+  display: none;
+}
+
+/* Targets the page user is on at the moment */
+
+nav.pagy.pagy-nav.pagination span.page.active{
+  font-weight: bold;
+}
+
+
+/* Targets the page that comes after the page user is on at the moment */
+
+/* Following will also apply to the next button when user is on the last page so you gotta write those with !important */
+
+nav.pagy.pagy-nav.pagination span.page.active + span   {
+}   
+
+
+/* Targets the first page */
+
+nav.pagy.pagy-nav.pagination :nth-child(2){
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Targets the last page */
+
+nav.pagy.pagy-nav.pagination :nth-last-child(2) {
+  display: flex !important;
+  justify-content: center !important;
+}  

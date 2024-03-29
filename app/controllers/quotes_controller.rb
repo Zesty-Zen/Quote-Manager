@@ -3,7 +3,9 @@ class QuotesController < ApplicationController
 
   def index
     @q = current_user.quotes.ordered.ransack(params[:q])
-    @quotes = @q.result
+    # @quotes = @q.result
+
+    @pagy, @quotes = pagy(@q.result, items: 10)
 
 
     # @quotes = current_user.quotes.ordered
