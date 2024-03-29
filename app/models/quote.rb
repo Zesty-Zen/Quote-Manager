@@ -40,5 +40,10 @@ class Quote < ApplicationRecord
     def total_price
         line_items.sum(&:total_price)
       end
-    
+      
+      def self.ransackable_attributes(auth_object = nil)
+        # Replace these with the attributes you want to allow searching
+        ["name", "id_value", "created_at"] 
+      end
+
 end

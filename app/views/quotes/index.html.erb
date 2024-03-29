@@ -1,21 +1,36 @@
 
+
+
+
 <%= turbo_stream_from current_user, "quotes" %>
   
   <main class="container">
   
-    <div class="container">
+  
       <div class="header">
         
         <h1>
           Quotes
         </h1>
-        
+
         <%= link_to "New quote",
                     new_quote_path,
                     class: "btn btn--primary",
                     data: { turbo_frame: dom_id(Quote.new) } %>
       
       </div>
+      
+      <br>
+
+      <div class="search-bar">  
+        <%= search_form_for @q, url: quotes_path, method: :get, remote: true do |f| %>
+            <%= f.text_field :name_cont, class: "search-field" ,  placeholder: "Enter Quote Name" %>
+            <%= f.submit "Search", class: "search-button" %>
+        <% end %>
+      </div>        
+
+
+        
        
       <br>
 
@@ -35,6 +50,6 @@
       
       <% end %>
    
-    </div>
+   
 
   </main>
