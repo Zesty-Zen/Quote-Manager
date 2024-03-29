@@ -114,16 +114,27 @@ nav.pagy.pagy-nav.pagination {
 }
 
 
-/* Targets all the elements of pagination bar */
+/* Targets all the spans of pagination bar */
 
 nav.pagy.pagy-nav.pagination span{
   display: flex;
   width: 3%;
   justify-content: center;
 }
-nav.pagy.pagy-nav.pagination span:hover{
-  background-color: rgb(120, 120, 120);
+    nav.pagy.pagy-nav.pagination span:hover{
+      background-color: rgb(120, 120, 120);
+    }
+
+
+/* Targets all the anchors within spans of pagination bar */
+
+nav.pagy.pagy-nav.pagination span a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
+
 
 
 /* Target the previous page button when it is active (User is not on the first page) */
