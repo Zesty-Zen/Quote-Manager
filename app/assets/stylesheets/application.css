@@ -62,14 +62,17 @@ h1{
 .search-bar{
   font-style: italic;
   width: 100%;
+  height: 2rem;
 }
 .search-field{
   font-style: italic;
   width: 87%;
+  height: 2rem;
 }
 .search-button{
   font-style: italic;
   width: 10%;
+  height: 2rem;
 }
 
 
