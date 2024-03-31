@@ -23,6 +23,8 @@ class QuotesController < ApplicationController
       @quote = Quote.new(quote_params)
       @quote.user_id = current_user.id
     if @quote.save
+      current_user.send_quote_created_notification(@quote)
+
       respond_to do |format|
         format.html { redirect_to quotes_path, notice: "Quote was successfully created." }
         format.turbo_stream { flash.now[:notice] = "Quote was successfully created." }

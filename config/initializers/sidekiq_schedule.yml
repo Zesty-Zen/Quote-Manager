@@ -1,0 +1,3 @@
+send_weekly_email_job:
+  cron: '0 21 * * 0' # Every Sunday at 9pm UTC = 5pm EST
+  class: SendWeeklyEmailJob

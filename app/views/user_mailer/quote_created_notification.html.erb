@@ -1,0 +1,18 @@
+<style>
+
+</style>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h1>Hello <%= @user.name %>,</h1>
+  <p>You created the quote <strong><%= @quote.name %></strong> at <%= @quote.created_at %>.</p>
+  <br>
+  <%= link_to 'View Quote', quote_url(@quote) %>
+</body>
+</html>
