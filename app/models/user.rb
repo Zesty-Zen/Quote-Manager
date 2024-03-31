@@ -8,8 +8,8 @@ class User < ApplicationRecord
   has_many :quotes
 
   def name
-    #email.split("@").first.capitalize       #Splits at first occurence of @
-    email.split(/\d/, 2).first.capitalize    #Splits at first occurence of any number
+    email.split("@").first.capitalize       #Splits at first occurence of @
+    #email.split(/\d/, 2).first.capitalize    #Splits at first occurence of any number
 
   end
 
