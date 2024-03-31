@@ -13,7 +13,9 @@ class User < ApplicationRecord
 
   end
 
-  
+  def send_quote_created_notification(quote)
+    UserMailer.quote_created_notification(self, quote).deliver_now
+  end
 
   after_create :send_welcome_email
 
