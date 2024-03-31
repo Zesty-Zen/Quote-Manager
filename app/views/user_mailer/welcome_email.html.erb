@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <h1>Welcome to example.com, <%= @user.name %></h1>
+
+    <p>
+      You signed in with emails: <%= @user.email %>
+    </p>
+
+    <%= link_to 'Click Here To Log in to your account', new_user_session_url %>
+    
+    
+    <br>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
