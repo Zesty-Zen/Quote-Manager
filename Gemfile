@@ -31,6 +31,7 @@ gem "devise"
 gem "redis"
 
 gem "sidekiq"
+gem 'sidekiq-cron'
 
 gem 'ransack'
 

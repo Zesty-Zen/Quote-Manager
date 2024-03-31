@@ -13,4 +13,9 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Quote Created')
   end
 
+  def weekly_email(user)
+    @user = user
+    mail(to: @user.email, subject: 'Weekly Update')
+  end
+  
 end
